@@ -4,9 +4,13 @@
   "description": "Learning React Chapter 5 sample for modular recipes with webpack",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon --exec \"npm start \"",
     "build": "webpack --mode development",
     "prestart": "npm run build",
-    "start": "serve ./dist"
+    "start": "serve ./dist -p 6000"
+  },
+  "nodemonConfig": {
+    "ignore": ["test/*", "dist/*", "node_modules/*", "package.json", "package-lock.json"]
   },
   "repository": {
     "type": "git",
@@ -26,6 +30,7 @@
   },
   "homepage": "https://github.com/MoonHighway/learning-react#readme",
   "dependencies": {
+    "nodemon": "^2.0.16",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "serve": "^11.3.1"
